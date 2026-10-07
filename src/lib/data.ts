@@ -1,123 +1,12 @@
-export const profile = {
-  name: "Deenadayalan K",
-  title: "Software Engineer — AI & Data Platforms",
-  location: "Chennai, India",
-  relocate: "Open to relocate: Bangalore / Hyderabad",
-  phone: "+91-8838109535",
-  email: "deena011197career@gmail.com",
-  linkedin: "https://linkedin.com/in/deenadayalan-kalaivanan-44679729b",
-  github: "https://github.com/Deenadayalan369",
-  availability: "Serving notice — available to join from 29 Dec 2026",
-  summary:
-    "Software Engineer with 3+ years building an enterprise ETL and data validation platform with Python, Node.js, FastAPI, Pandas and RabbitMQ. Benchmarked it reconciling 50 million rows with zero differences on a single machine, shipped an LLM feature (OpenAI API) that turns plain-English business rules into Pandas code, and built an MCP server that lets Claude operate the platform. Promoted to Software Engineer in 2026; focused on AI features over large, messy enterprise data.",
-};
-
-export const stats = [
-  { label: "Rows reconciled, zero diffs", value: "50M" },
-  { label: "Load throughput", value: "52.8K rows/sec" },
-  { label: "Largest file-to-file diff", value: "75GB in 7hrs" },
-  { label: "Years shipping production code", value: "3+" },
-];
-
-export const skillGroups = [
-  { group: "Languages", items: ["Python", "JavaScript", "TypeScript", "SQL"] },
-  {
-    group: "AI / LLM",
-    items: [
-      "OpenAI API",
-      "Claude",
-      "MCP (Model Context Protocol)",
-      "LLM Integration",
-      "Prompt Engineering",
-      "Natural Language to Code",
-    ],
-  },
-  {
-    group: "Backend & APIs",
-    items: ["Node.js", "FastAPI", "FeathersJS", "Express.js", "REST APIs", "Microservices"],
-  },
-  {
-    group: "Data Engineering",
-    items: ["ETL Pipelines", "Data Reconciliation", "Data Validation", "Data Quality", "Pandas", "Dask", "RabbitMQ"],
-  },
-  { group: "Databases", items: ["PostgreSQL", "MySQL", "Oracle", "MongoDB", "Apache Hive"] },
-  { group: "Frontend", items: ["Angular", "React", "Next.js"] },
-  { group: "Tools", items: ["Git", "Node-RED", "WebSockets", "Claude Code"] },
-  {
-    group: "Evaluated (R&D)",
-    items: ["Apache Spark", "Trino", "Apache Ignite", "Go", "Rust", "React Flow", "shadcn/ui"],
-  },
-];
-
-export type ExperienceBullet = string;
-
-export const experience = [
-  {
-    company: "Tristha Global Pvt. Ltd.",
-    location: "Chennai, India",
-    role: "Software Engineer",
-    subRole: "Associate Software Engineer (Sep 2023 – Apr 2026)",
-    period: "Sep 2023 – Present",
-    roleNote: "Software Engineer (Apr 2026 – Present)",
-    project: "Travis — enterprise low-code ETL and data testing platform",
-    bullets: [
-      "Built a data reconciliation engine (hash-partitioned by join key across RabbitMQ queues and Python workers) that scaled from failing under 1GB to comparing two 75GB files in 7 hours on one 16GB machine (proof of concept).",
-      "Benchmarked the platform at 50 million rows: loaded CSV to MongoDB at ~52,800 rows/sec and reconciled every row across CSV, DAT, MongoDB and Hive with zero differences.",
-      "Shipped an LLM feature (OpenAI API) that converts plain-English business rules into Pandas expressions, so non-developers can build transformations without code.",
-      "Built an MCP (Model Context Protocol) server that exposes Travis ETL operations as tools Claude can call through natural language.",
-      "Fixed a critical failure where RabbitMQ dropped validation workers under load, traced through broker logs; a 50M-row DAT-to-Hive validation went from stalling at 17–74% to 100% complete.",
-      "Migrated the core transformation engine from Node.js/Formula.js to a Python (Pandas, FastAPI) microservice.",
-      "Designed a message-driven architecture: custom Node-RED nodes wired through RabbitMQ to Python workers, running pipelines independently of the central server and ending bulk-load memory crashes.",
-      "Designed a metadata-driven data quality framework with configurable duplicate, null and format checks.",
-      "Built a General Ledger (GL) validation engine that evaluates user-defined business-rule expressions and generates Pass/Fail results automatically.",
-      "Led R&D of the Joiner node for large-dataset joins; streamed live pipeline status to the Angular dashboard over WebSockets.",
-    ],
-    rd: [
-      "Evaluated Apache Ignite and Trino as federated query engines for heterogeneous joins, testing cross-source joins on 1GB of Oracle and MongoDB data.",
-      "Compared Dask, Apache Spark and RabbitMQ-based worker queues for scaling ETL processing beyond a single machine; RabbitMQ worker queues were adopted in the platform.",
-      "Evaluated React Flow and shadcn/ui for a next-generation visual pipeline builder.",
-      "Analysed Next.js, Go and Rust backend structures for a next-generation platform architecture, including a Go API layer and a Rust execution worker.",
-    ],
-  },
-  {
-    company: "Freelance Software Developer",
-    location: "Self-Employed",
-    role: "Software Developer",
-    period: "Sep 2022 – Aug 2023",
-    bullets: [
-      "Built a Hospital and Patient Management System from scratch (MongoDB, Express.js, React, Node.js): REST APIs, authentication, database schema and role-based access control for patients and clinical staff.",
-      "Migrated an enterprise Angular application (Blockyt) from Angular 8 to Angular 14, rewriting legacy code to support newer npm packages and modernise the UI.",
-    ],
-  },
-];
-
-export const earlierExperience = [
-  {
-    role: "Engineer — Condition Monitoring",
-    company: "MVS Acmei Technology Pvt. Ltd.",
-    period: "Aug 2021 – Aug 2022",
-    detail:
-      "Collected and analysed vibration data from industrial rotating equipment to detect faults, and wrote diagnostic reports with predictive-maintenance recommendations to reduce downtime.",
-  },
-  {
-    role: "Graduate Engineering Trainee",
-    company: "Sri Sai Equipments Pvt. Ltd.",
-    period: "Dec 2020 – Jul 2021",
-    detail: "Supported operations and maintenance teams with inspection, troubleshooting and installation of industrial machinery.",
-  },
-  {
-    role: "Field Service Technician",
-    company: "Self-Employed",
-    period: "Aug 2019 – Jul 2020",
-    detail: "Installed and configured billing software, POS systems, kiosks and Windows systems at retail and hotel client sites.",
-  },
-];
+// All site content lives in src/content/content.json — edit that file to update the site.
+// This module only adds types on top of it; you shouldn't need to change anything here.
+import content from "@/content/content.json";
 
 export type Project = {
   slug: string;
   name: string;
   tagline: string;
-  status: "Shipped" | "In progress";
+  status: string;
   stack: string[];
   description: string;
   highlights: string[];
@@ -128,73 +17,23 @@ export type Project = {
   featured?: boolean;
 };
 
-export const projects: Project[] = [
-  {
-    slug: "curasynk",
-    name: "CuraSynk",
-    tagline: "Offline-first family health records app",
-    status: "Shipped",
-    stack: ["Flutter", "Dart", "SQLite", "Android"],
-    description:
-      "A 100% private, offline-first Android app for managing family health records, medical histories and medication reminders — no cloud, no servers, every byte stays on-device. Built end-to-end solo: architecture, UI, local notifications and release signing.",
-    highlights: [
-      "Family member profiles with individual medical history & condition tracking (cured / ongoing / not medicated)",
-      "Smart medication alarms via timezone-aware local notifications",
-      "In-app PDF/image document viewer with pinch-to-zoom",
-      "App PIN + security-question recovery, encrypted local backup/restore",
-      "Released as signed APK + Play Store AAB (v1.0.1) — currently in closed testing, available here as a direct APK while it clears Google's 12-tester requirement",
-    ],
-    github: "https://github.com/Deenadayalan369/CuraSynk",
-    apkPath: "/downloads/curasynk-release.apk",
-    videoPath: "/videos/curasynk-demo.mp4",
-    image: "/images/curasynk-icon.png",
-    featured: true,
-  },
-  {
-    slug: "datanerva",
-    name: "DataNerva",
-    tagline: "Prompt-based data validation engine",
-    status: "In progress",
-    stack: ["Python", "Pandas", "OpenAI API", "FastAPI"],
-    description:
-      "A data validation engine driven entirely by natural-language prompts — describe a check in plain English and the engine runs it, no SQL or code required.",
-    highlights: [
-      "Natural-language rule parsing into executable validation logic",
-      "No-code workflow for non-technical data stewards",
-      "Built on the same reconciliation principles proven at 50M-row scale at Travis",
-    ],
-  },
-  {
-    slug: "ai-document-manager",
-    name: "AI Document Manager",
-    tagline: "Ask questions of your own documents",
-    status: "In progress",
-    stack: ["Python", "LLM Integration", "Vector Search"],
-    description:
-      "A document storage and viewing app where users upload files and get insights by asking questions in plain language, instead of manually searching.",
-    highlights: [
-      "Upload-and-query flow over personal document archives",
-      "Plain-language Q&A grounded in the uploaded files",
-    ],
-  },
-  {
-    slug: "ai-communication-assistant",
-    name: "AI Communication Assistant",
-    tagline: "One prompt, every inbox summarised",
-    status: "In progress",
-    stack: ["Python", "LLM Integration", "APIs"],
-    description:
-      "A personal assistant that connects communication channels and returns summaries on request through plain-language prompts, built to cut daily context-switching.",
-    highlights: ["Unified summaries across connected channels", "On-demand, prompt-driven digests"],
-  },
-];
-
-export const education = {
-  degree: "B.E. Mechanical Engineering",
-  school: "Saranathan College of Engineering (Anna University)",
-  location: "Tamil Nadu, India",
-  period: "2015 – 2019",
-  detail: "CGPA 7.62/10",
+export type Job = {
+  company: string;
+  location: string;
+  role: string;
+  subRole?: string;
+  period: string;
+  roleNote?: string;
+  project?: string;
+  bullets: string[];
+  rd?: string[];
 };
 
-export const languages = ["English", "Tamil", "Hindi"];
+export const profile = content.profile;
+export const stats = content.stats;
+export const skillGroups = content.skillGroups;
+export const experience: Job[] = content.experience;
+export const earlierExperience = content.earlierExperience;
+export const projects: Project[] = content.projects;
+export const education = content.education;
+export const languages = content.languages;

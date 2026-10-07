@@ -13,11 +13,17 @@ npm run dev
 
 Open http://localhost:3000.
 
+## Updating content
+
+**See [EDITING.md](EDITING.md)** — all content lives in `src/content/content.json` and can be
+edited directly on github.com (no local setup); Vercel redeploys automatically on commit.
+
 ## Project structure
 
 - `src/app` — App Router entry (`layout.tsx`, `page.tsx`, `globals.css`)
 - `src/components` — section components
-- `src/lib/data.ts` — all resume/project content in one typed file; edit this to update the site
+- `src/content/content.json` — **all site content; this is the file you edit**
+- `src/lib/data.ts` — thin typed wrapper over the JSON (rarely needs changing)
 - `public/downloads/curasynk-release.apk` — direct-install Android APK (arm64)
 - `public/videos/curasynk-demo.mp4` — CuraSynk demo video shown in the project modal
 - `public/Deenadayalan_K_Resume.pdf` — downloadable resume
@@ -27,7 +33,10 @@ Open http://localhost:3000.
 1. Push this repo to GitHub (`gh repo create` or via github.com, then `git remote add origin <url> && git push -u origin main`).
 2. Go to https://vercel.com/new, import the GitHub repo, keep defaults (Next.js is auto-detected), click Deploy.
 3. Vercel gives you a `*.vercel.app` URL immediately; attach a custom domain later under Project → Settings → Domains.
-4. If the deployed URL differs from `deenadayalan-k.vercel.app` (used as a placeholder in the resume and site), update it in `src/lib/data.ts` and regenerate the resume PDF.
+
+**Live at:** https://portfolio-sage-kappa-46.vercel.app
+
+Every push to `main` triggers an automatic redeploy — no manual step.
 
 ### Note on the CuraSynk APK
 
