@@ -10,7 +10,7 @@
     "github": "https://github.com/Deenadayalan369",
     "portfolio": "https://portfolio-sage-kappa-46.vercel.app",
     "availability": "Serving notice — available to join from 29 Dec 2026",
-    "summary": "Software Engineer with 3+ years building an enterprise ETL and data validation platform with Python, Node.js, FastAPI, Pandas and RabbitMQ. Benchmarked it reconciling 50 million rows with zero differences on a single machine, shipped an LLM feature (OpenAI API) that turns plain-English business rules into Pandas code, and built an MCP server that lets Claude operate the platform. Promoted to Software Engineer in 2026; focused on AI features over large, messy enterprise data."
+    "summary": "Software Engineer with 3+ years building an enterprise ETL and data validation platform with Python, Node.js, FastAPI, Pandas and RabbitMQ. Benchmarked it reconciling 50 million rows with zero differences on a single machine, shipped an LLM feature (OpenAI API) that turns plain-English business rules into Pandas code, and used Claude Code to build an MCP server that lets users operate the platform through a chat interface. Promoted to Software Engineer in 2026; now building agentic, chat-based LLM tools."
   },
 
   "stats": [
@@ -48,8 +48,7 @@
         "Data Validation",
         "Data Quality",
         "Pandas",
-        "Dask",
-        "RabbitMQ"
+        "Dask"
       ]
     },
     {
@@ -62,7 +61,7 @@
     },
     {
       "group": "Tools",
-      "items": ["Git", "Node-RED", "WebSockets", "Claude Code"]
+      "items": ["Git", "RabbitMQ", "Node-RED", "WebSockets", "Claude Code"]
     },
     {
       "group": "Evaluated (R&D)",
@@ -70,6 +69,7 @@
         "Apache Spark",
         "Trino",
         "Apache Ignite",
+        "gRPC",
         "Next.js",
         "Go",
         "Rust",
@@ -92,9 +92,11 @@
         "Built a data reconciliation engine (hash-partitioned by join key across RabbitMQ queues and Python workers) that scaled from failing under 1GB to comparing two 75GB files in 7 hours on one 16GB machine (proof of concept).",
         "Benchmarked the platform at 50 million rows: loaded CSV to MongoDB at ~52,800 rows/sec and reconciled every row across CSV, DAT, MongoDB and Hive with zero differences.",
         "Shipped an LLM feature (OpenAI API) that converts plain-English business rules into Pandas expressions, so non-developers can build transformations without code.",
-        "Built an MCP (Model Context Protocol) server that exposes Travis ETL operations as tools Claude can call through natural language.",
+        "Used Claude Code to build an MCP (Model Context Protocol) server for Travis ETL, connected to the MCP client chat window in the new Terra-Sentinel interface, so users can run platform operations through natural language.",
         "Fixed a critical failure where RabbitMQ dropped validation workers under load, traced through broker logs; a 50M-row DAT-to-Hive validation went from stalling at 17–74% to 100% complete.",
+        "Built a Python utility (Pandas, Dask) for a specific client requirement that reconciles DAT and CSV files cell by cell, handling files up to 2GB.",
         "Migrated the core transformation engine from Node.js/Formula.js to a Python (Pandas, FastAPI) microservice.",
+        "Migrating the legacy UI to the new Terra-Sentinel Angular 20 interface (standalone components, signals), using Claude Code for AI-assisted development and refactoring.",
         "Designed a message-driven architecture: custom Node-RED nodes wired through RabbitMQ to Python workers, running pipelines independently of the central server and ending bulk-load memory crashes.",
         "Designed a metadata-driven data quality framework with configurable duplicate, null and format checks.",
         "Built a General Ledger (GL) validation engine that evaluates user-defined business-rule expressions and generates Pass/Fail results automatically.",
@@ -103,6 +105,7 @@
       "rd": [
         "Evaluated Apache Ignite and Trino as federated query engines for heterogeneous joins, testing cross-source joins on 1GB of Oracle and MongoDB data.",
         "Compared Dask, Apache Spark and RabbitMQ-based worker queues for scaling ETL processing beyond a single machine; RabbitMQ worker queues were adopted in the platform.",
+        "Built a gRPC dataflow prototype as an alternative to REST APIs and WebSockets for moving data between services; after comparing it with RabbitMQ, RabbitMQ was selected for the platform.",
         "Evaluated React Flow and shadcn/ui for a next-generation visual pipeline builder.",
         "Analysed Next.js, Go and Rust backend structures for a next-generation platform architecture, including a Go API layer and a Rust execution worker."
       ]

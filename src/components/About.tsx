@@ -20,8 +20,9 @@ export default function About() {
               </p>
               <p>
                 Over the last year the focus has shifted toward AI: shipping an LLM feature that turns
-                plain-English business rules into Pandas code, and building an MCP server so Claude can
-                operate the platform directly. Outside work I ship my own products end-to-end — most
+                plain-English business rules into Pandas code, and using Claude Code to build an MCP
+                server wired into a chat window, so users can run the whole platform in plain language.
+                I&apos;m now building agentic, chat-based LLM tools. Outside work I ship my own products end-to-end — most
                 recently <span className="text-foreground">CuraSynk</span>, an offline-first health
                 records app I designed, built and released solo.
               </p>
