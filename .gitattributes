@@ -1,0 +1,17 @@
+# Normalize text files on commit, keep native line endings in the working tree.
+* text=auto
+
+# Binary assets — never apply line-ending conversion, which would corrupt them.
+*.pdf   binary
+*.apk   binary
+*.aab   binary
+*.mp4   binary
+*.webm  binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.webp  binary
+*.ico   binary
+*.woff  binary
+*.woff2 binary

@@ -22,7 +22,7 @@ export default function About() {
                 Over the last year the focus has shifted toward AI: shipping an LLM feature that turns
                 plain-English business rules into Pandas code, and using Claude Code to build an MCP
                 server wired into a chat window, so users can run the whole platform in plain language.
-                I&apos;m now building agentic, chat-based LLM tools. Outside work I ship my own products end-to-end — most
+                I&apos;m now building agentic, LLM-powered tools on data platforms. Outside work I ship my own products end-to-end — most
                 recently <span className="text-foreground">CuraSynk</span>, an offline-first health
                 records app I designed, built and released solo.
               </p>
@@ -39,10 +39,6 @@ export default function About() {
                 <div>
                   <dt className="text-muted">Location</dt>
                   <dd className="mt-0.5">{profile.location}</dd>
-                </div>
-                <div>
-                  <dt className="text-muted">Open to relocation</dt>
-                  <dd className="mt-0.5">{profile.relocate.replace("Open to relocate: ", "")}</dd>
                 </div>
                 <div>
                   <dt className="text-muted">Availability</dt>
