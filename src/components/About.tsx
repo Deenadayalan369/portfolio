@@ -41,10 +41,6 @@ export default function About() {
                   <dd className="mt-0.5">{profile.location}</dd>
                 </div>
                 <div>
-                  <dt className="text-muted">Availability</dt>
-                  <dd className="mt-0.5">{profile.availability.replace("Serving notice — ", "")}</dd>
-                </div>
-                <div>
                   <dt className="text-muted">Languages</dt>
                   <dd className="mt-0.5">{languages.join(", ")}</dd>
                 </div>

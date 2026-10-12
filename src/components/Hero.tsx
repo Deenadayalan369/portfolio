@@ -11,16 +11,6 @@ export default function Hero() {
   return (
     <section id="top" className="noise-bg relative overflow-hidden px-6 pb-20 pt-16 sm:pt-24">
       <div className="mx-auto max-w-5xl">
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1 text-xs text-muted"
-        >
-          <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-          {profile.availability}
-        </motion.div>
-
         <motion.h1
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}

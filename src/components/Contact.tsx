@@ -13,8 +13,6 @@ export default function Contact() {
             <h2 className="mx-auto mt-4 max-w-xl font-display text-3xl font-semibold tracking-tight sm:text-4xl">
               Open to new opportunities in AI &amp; data engineering
             </h2>
-            <p className="mx-auto mt-4 max-w-md text-muted">{profile.availability}</p>
-
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <a
                 href={`mailto:${profile.email}`}

@@ -72,9 +72,6 @@ Change `"status": "In progress"` to `"status": "Shipped"`.
 ### Add a bullet to your job
 Find `"bullets": [` under the company and add a new `"...",` line.
 
-### Change your availability line
-Edit `"availability"` near the top under `"profile"`.
-
 ### Add a skill
 Find the right `"group"` in `"skillGroups"` and add it to that group's `"items"` list.
 
