@@ -45,13 +45,6 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-3">
-          <a
-            href="/Deenadayalan_K_Resume.pdf"
-            download
-            className="hidden rounded-full border border-border px-4 py-1.5 text-sm transition-colors hover:border-accent hover:text-accent sm:inline-block"
-          >
-            Resume
-          </a>
           <ThemeToggle />
           <button
             aria-label="Toggle menu"
@@ -79,9 +72,6 @@ export default function Navbar() {
                 {l.label}
               </a>
             ))}
-            <a href="/Deenadayalan_K_Resume.pdf" download className="text-sm text-accent">
-              Download Resume
-            </a>
           </div>
         </div>
       )}

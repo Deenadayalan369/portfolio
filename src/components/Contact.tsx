@@ -11,7 +11,7 @@ export default function Contact() {
           <div className="noise-bg relative overflow-hidden rounded-3xl border border-border bg-surface p-10 text-center sm:p-16">
             <div className="text-xs font-medium uppercase tracking-widest text-accent">Let&apos;s talk</div>
             <h2 className="mx-auto mt-4 max-w-xl font-display text-3xl font-semibold tracking-tight sm:text-4xl">
-              Open to new opportunities in AI &amp; data engineering
+              Always happy to talk AI, data and systems at scale
             </h2>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <a

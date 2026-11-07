@@ -51,13 +51,6 @@ export default function Hero() {
           >
             See my work
           </a>
-          <a
-            href="/Deenadayalan_K_Resume.pdf"
-            download
-            className="rounded-full border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:border-accent hover:text-accent"
-          >
-            Download Resume
-          </a>
           <div className="ml-1 flex items-center gap-1">
             <a
               href={profile.github}
